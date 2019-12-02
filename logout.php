@@ -8,6 +8,7 @@
   <body>
     <?php
       setcookie('zalogowanyuser', 'clear', time() + (1), "/");
+      setcookie('typkonta', 'clear', time() + (1), "/");
       echo '<script type="text/javascript">
         window.location = "index.php";
         </script>';

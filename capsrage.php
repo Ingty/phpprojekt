@@ -8,7 +8,8 @@
   <body>
     <?php
     echo '<button onclick="window.location.href=\'main.php\'">Powrót</button><br>';
-    $con = mysqli_connect('localhost','root','','projekt') or die (mysqli_error());
+    $con = mysqli_connect('localhost','root','','projektingty') or die (mysqli_error());
+    mysqli_query($con,'SET NAMES \'utf8\'');
     $query = "SELECT * FROM capsrage";
     $result = mysqli_query($con,$query) or die(mysqli_error());
     $i = 0;

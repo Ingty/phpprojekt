@@ -32,7 +32,30 @@ body{
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-input[type=text],input[type=password]{
+#dodajdiv{
+  background: white;
+  color: black;
+  width: 500px;
+  margin: 0;
+  padding: 10px 50px 50px 50px;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+#tekstduzy{
+  width: 500px;
+  height: 150px;
+  border-radius: 5px;
+  border: solid 1px #ddd;
+  margin: 0px 0px 10px 0px;
+  background: #ddd;
+  text-align: center;
+}
+input[type=text],input[type=password],input[type=date],select{
   width: 200px;
   height: 30px;
   border-radius: 5px;
