@@ -7,7 +7,7 @@
   </head>
   <?php
   if(isSet($_COOKIE['zalogowanyuser'])){
-    echo '<div id=\'main\'>';
+    echo '<div class="div-container"><div id=\'main\'>';
     echo '<h2>Witaj na głównej stronie <b>' . $_COOKIE["zalogowanyuser"] . '</b>!</h2>';
     echo '<h3>Kategorie: </h3>';
     echo '<button onclick="window.location.href=\'klasyki.php\'">Klasyki</button>';
@@ -19,7 +19,7 @@
       echo '<button onclick="window.location.href=\'add.php\'">Dodaj nową pastę</button>';
     }
     echo '<button onclick="window.location.href=\'logout.php\'">Wyloguj</button>';
-    echo '</div>';
+    echo '</div></div>';
   }
   else{
     header('Location: login.php');

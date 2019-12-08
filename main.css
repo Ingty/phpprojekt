@@ -10,13 +10,9 @@ body{
   width: 200px;
   margin: 0;
   padding: 10px 50px 50px 50px;
-  position: absolute;
   top: 30%;
   left: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  display: inline-block;
 }
 #main{
   background: white;
@@ -24,13 +20,20 @@ body{
   width: 200px;
   margin: 0;
   padding: 10px 50px 50px 50px;
-  position: absolute;
   top: 20%;
   left: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  display: inline-block;
+}
+.div-container {
+  text-align: center;
+}
+#exportgora{
+  background: white;
+  color: black;
+  width: 200px;
+  margin: 0px 0px 0px 0px;
+  padding: 10px 40px 30px 40px;
+  display: inline-block;
 }
 #dodajdiv{
   background: white;
@@ -38,13 +41,9 @@ body{
   width: 500px;
   margin: 0;
   padding: 10px 50px 50px 50px;
-  position: absolute;
   top: 15%;
   left: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  display: inline-block;
 }
 #tekstduzy{
   width: 500px;
@@ -68,8 +67,8 @@ input[type=submit]{
   width: 200px;
   height: 35px;
   border-radius: 5px;
-  border: solid 1px #504293;
-  margin: 0px 0px 5px 0px;
+  border: solid 1px #403283;
+  margin: 5px;
   background: #504293;
   text-align: center;
   color: white;
@@ -88,9 +87,9 @@ button:hover{
   width: 150px;
   height: 35px;
   border-radius: 5px;
-  border: solid 1px #302273;
+  border: solid 1px #403283;
   margin: 5px;
-  background: #403283;
+  background: #201263;
   text-align: center;
   color: white;
 }

@@ -32,7 +32,7 @@
 
     }
     else{
-      print '<div id="dodajdiv"><form action="add.php" method="post">
+      print '<div class="div-container"><div id="dodajdiv"><form action="add.php" method="post">
       Kategoria:<br>
         <select name="tabela">
           <option name="klasyki" value="klasyki">Klasyki</option>
@@ -45,7 +45,7 @@
         Data:<br><input type="date" name="data"><br>
         Autor:<br><input type="text" name="autor"><br>
         <input type="submit">
-      </form></div>';
+      </form></div></div>';
     }
     ?>
 
