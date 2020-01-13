@@ -6,8 +6,10 @@ if(isSet($_POST['username'])&&isSet($_POST['password'])){
     $query = mysqli_query($con,"select * FROM users WHERE login='$user' && password='$pass'");
     $row = mysqli_num_rows($query);
     $queryresult = mysqli_fetch_row($query);
+    $date = date('Y-m-d H:i:s');
     if($row == 1)
     {
+      $query = mysqli_query($con,"insert into historialog values ('','$user','$date');");
       session_start();
       setcookie('zalogowanyuser', $user, time() + (3600), "/");
       if($queryresult[3]=="premium"){

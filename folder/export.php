@@ -23,7 +23,7 @@
     mysqli_query($con,'SET NAMES \'utf8\'');
     $result = mysqli_query($con,"SELECT * FROM $tabela");
     $rekordy = ceil(mysqli_num_rows($result)/5);
-    echo '<form action=" ' . $tabela . '.php method="post">Strona:<br> <select class="form-control show-tick sel" data-width="fit" name="strona">';
+    echo '<form action=" ' . $tabela . '.php method="post">Strona:<br><select class="form-control show-tick sel" data-width="fit" name="strona">';
     for($i=1;$i<=$rekordy;$i++){
       echo '<option value=" ' . $i . '">' . $i . '</option>';
     }
@@ -42,7 +42,11 @@
     while ($row = mysqli_fetch_assoc($result)) {
         echo '<div class="export justify-content-center text-center">';
         foreach($row as $key => $field) {
+            if($i==0){
+              $currentid = htmlspecialchars($field);
+            }
             if($i==1){
+              echo '<a href="delete.php?id=' . $currentid . '&tabela='. $tabela . '">Usun rekord</a>';
               echo '<p class=\'autor\'>  ' . htmlspecialchars($field) . '  </p>';
             }
             if($i==2){
