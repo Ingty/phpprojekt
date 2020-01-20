@@ -47,7 +47,8 @@
         echo '"><br>Haslo: <input type="password" name="password" required="required" class="form-control"';
         echo '"><br>Dodane pasty: <input type="text" class="form-control" disabled="disabled" value="' . $dodpasty;
         echo '"><br>Typ konta: <input type="text" class="form-control" disabled="disabled" value="' . $typkonta . '">';
-        echo '<input type="submit">';
+        echo '<br><input type="submit" value="Wyślij" class="btn btn-primary btn-lg btn-block">';
+        echo '<a href="main.php" style="color: white;" class="btn btn-primary btn-lg btn-block">Powrót</a>';
         echo '</form>';
       echo '</div>';
      ?>

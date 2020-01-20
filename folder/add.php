@@ -13,6 +13,7 @@
       $data = $_POST["data"];
       $autor = $_POST["autor"];
       $tabela = $_POST["tabela"];
+      $c=$_COOKIE['zalogowanyuser'];
       $link = mysqli_connect("localhost", "root", "", "projektingty");
       if($link === false){
           die("ERROR: Could not connect. " . mysqli_connect_error());
@@ -26,6 +27,7 @@
       $sql = "INSERT INTO $tabela VALUES ('','$autor','$nazwa', '$data', '$tresc')";
       if(mysqli_query($link, $sql)){
           echo '<script>function onl(){document.getElementById("REEE").innerHTML = "Pasta '. $nazwa .' dodana poprawnie!";} </script>';
+          mysqli_query($link,"UPDATE user SET dodpasty=dodpasty+1 WHERE login=\"$c\"");
       } else{
           echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
       }
