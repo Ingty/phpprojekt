@@ -26,6 +26,9 @@
               <button onclick='window.location.href="add.php"' type="button" id="asdf" class="btn btn-primary btn-lg btn-block" hidden="hidden">Dodaj nową pastę</button><br>
           </div>
           <div class="form-group">
+              <button onclick='window.location.href="user.php"' type="button" class="btn btn-primary btn-lg btn-block">Informacje o użytkowniku</button><br>
+          </div>
+          <div class="form-group">
               <button onclick='window.location.href="logout.php"' type="button" class="btn btn-primary btn-lg btn-block">Wyloguj</button>
           </div>
        </form>
