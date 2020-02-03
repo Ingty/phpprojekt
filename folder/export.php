@@ -10,7 +10,7 @@
     <?php
     $tabela = $_GET["tabela"];
     echo '<div class="login-form">';
-    echo '<form action="' . $tabela . '.php" method="post">
+    echo '<form action="export.php?tabela='. $tabela .'" method="post">
           Sortowanie: <select class="form-control show-tick sel" data-width="fit" name="sort">
             <option value="desc">Malejąco</option>
             <option value="asc">Rosnąco</option>
@@ -23,7 +23,7 @@
     mysqli_query($con,'SET NAMES \'utf8\'');
     $result = mysqli_query($con,"SELECT * FROM $tabela");
     $rekordy = ceil(mysqli_num_rows($result)/5);
-    echo '<form action=" ' . $tabela . '.php method="post">Strona:<br><select class="form-control show-tick sel" data-width="fit" name="strona">';
+    echo '<form action="export.php?tabela='. $tabela .'" method="post">Strona:<br><select class="form-control show-tick sel" data-width="fit" name="strona">';
     for($i=1;$i<=$rekordy;$i++){
       echo '<option value=" ' . $i . '">' . $i . '</option>';
     }

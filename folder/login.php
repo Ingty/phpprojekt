@@ -3,7 +3,7 @@ if(isSet($_POST['username'])&&isSet($_POST['password'])){
     $user = $_POST['username'];
     $pass = $_POST['password'];
     $con = mysqli_connect('localhost','root','','projektingty') or die (mysqli_error());
-    $query = mysqli_query($con,"select * FROM users WHERE login='$user' && password='$pass'");
+    $query = mysqli_query($con,"select * FROM user WHERE login='$user' && password='$pass'");
     $row = mysqli_num_rows($query);
     $queryresult = mysqli_fetch_row($query);
     $date = date('Y-m-d H:i:s');

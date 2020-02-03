@@ -17,6 +17,8 @@
     }
     mysqli_query($con,'SET NAMES \'utf8\'');
       $query = "UPDATE user SET imie=\"$imie\", nazwisko=\"$nazwisko\", password=\"$password\" WHERE login=\"$login\"";
+      $date = date('Y-m-d H:i:s');
+      mysqli_query($link,"INSERT INTO log VALUES ('','$login','$date','zmienil swoje dane')");
       mysqli_query($con,$query) or die (mysqli_error($con));
       echo '<script type="text/javascript">
             alert("Zmieniono poprawnie");

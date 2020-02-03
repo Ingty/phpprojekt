@@ -23,7 +23,10 @@
               <button onclick='window.location.href="export.php?tabela=janusze"' type="button" class="btn btn-primary btn-lg btn-block">Janusze i Grażyny</button><br>
           </div>
           <div class="form-group">
-              <button onclick='window.location.href="add.php"' type="button" id="asdf" class="btn btn-primary btn-lg btn-block" hidden="hidden">Dodaj nową pastę</button><br>
+              <button onclick='window.location.href="add.php"' type="button" id="asdf" class="btn btn-primary btn-lg btn-block" hidden="hidden">Dodaj nową pastę</button>
+          </div>
+          <div class="form-group">
+              <button onclick='window.location.href="statystyki.php"' type="button" class="btn btn-primary btn-lg btn-block">Statystyki</button>
           </div>
           <div class="form-group">
               <button onclick='window.location.href="user.php"' type="button" class="btn btn-primary btn-lg btn-block">Informacje o użytkowniku</button><br>
