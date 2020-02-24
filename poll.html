@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Strona główna</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css.css">
+  </head>
+  <body>
+      <div class="login-form">
+        <form action="poll.php" method="post">
+          <h2 class="text-center">Ankieta</h2>
+          <div class="form-group">
+            <b>Podoba ci się nasz serwis?</b><br>
+            <input type="radio" name="question1" value="T">
+            <label for="T">Tak</label><br>
+            <input type="radio" name="question1" value="N">
+            <label for="N">Tak</label><br>
+          </div>
+          <div class="form-group">
+            <b>Co możemy poprawić w serwisie?</b><br>
+            <textarea name="question2" rows="8" cols="50" required></textarea>
+          </div>
+          <div class="form-group">
+            <b>Jaka jest twoja ulubiona kategoria?</b><br>
+            <input type="radio" name="question3" value="klasyki">
+            <label for="klasyki">Klasyki</label><br>
+            <input type="radio" name="question3" value="krotkie">
+            <label for="krotkie">Krótkie</label><br>
+            <input type="radio" name="question3" value="capsrage">
+            <label for="capsrage">CAPSRAGE</label><br>
+            <input type="radio" name="question3" value="janusze">
+            <label for="janusze">Janusze</label><br>
+          </div>
+          <input type="submit" name="submit" value="Prześlij">
+        </form>
+      </div>
+  </body>
+</html>

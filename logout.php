@@ -10,7 +10,7 @@
       setcookie('zalogowanyuser', 'clear', time() + (1), "/");
       setcookie('typkonta', 'clear', time() + (1), "/");
       echo '<script type="text/javascript">
-        window.location = "index.php";
+        window.location = "index.html";
         </script>';
     ?>
   </body>

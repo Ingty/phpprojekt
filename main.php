@@ -2,30 +2,52 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Główna</title>
-    <link rel="stylesheet" href="main.css">
+    <title>Strona główna</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css.css">
   </head>
-  <?php
-  if(isSet($_COOKIE['zalogowanyuser'])){
-    echo '<div class="div-container"><div id=\'main\'>';
-    echo '<h2>Witaj na głównej stronie <b>' . $_COOKIE["zalogowanyuser"] . '</b>!</h2>';
-    echo '<h3>Kategorie: </h3>';
-    echo '<button onclick="window.location.href=\'klasyki.php\'">Klasyki</button>';
-    echo '<button onclick="window.location.href=\'krotkie.php\'">Krótkie</button>';
-    echo '<button onclick="window.location.href=\'capsrage.php\'">CAPSRAGE</button>';
-    echo '<button onclick="window.location.href=\'janusze.php\'">Janusze i Grażyny</button>';
-    echo '<br><br><br>';
-    if($_COOKIE['typkonta']=="premium"){
-      echo '<button onclick="window.location.href=\'add.php\'">Dodaj nową pastę</button>';
-    }
-    echo '<button onclick="window.location.href=\'logout.php\'">Wyloguj</button>';
-    echo '</div></div>';
-  }
-  else{
-    header('Location: login.php');
-  }
-  ?>
-  <body>
-
-  </body>
+<body>
+  <div class="login-form">
+        <form>
+          <h1 class="text-center">Witaj na Wypoku!</h1>
+          <div class="form-group">
+              <p class="text-center"><b>Zapraszamy do wypełnienia ankiety:</b></p>
+              <button onclick='window.location.href="poll.html"' type="button" class="btn btn-primary btn-lg btn-block">Ankieta</button><br>
+          </div>
+          <div class="form-group">
+              <button onclick='window.location.href="export.php?tabela=klasyki"' type="button" class="btn btn-primary btn-lg btn-block">Klasyki</button>
+          </div>
+          <div class="form-group">
+              <button onclick='window.location.href="export.php?tabela=krotkie"' type="button" class="btn btn-primary btn-lg btn-block">Krótkie</button>
+          </div>
+          <div class="form-group">
+              <button onclick='window.location.href="export.php?tabela=capsrage"' type="button" class="btn btn-primary btn-lg btn-block">CAPSRAGE</button>
+          </div>
+          <div class="form-group">
+              <button onclick='window.location.href="export.php?tabela=janusze"' type="button" class="btn btn-primary btn-lg btn-block">Janusze i Grażyny</button><br>
+          </div>
+          <div class="form-group">
+              <button onclick='window.location.href="add.php"' type="button" id="asdf" class="btn btn-primary btn-lg btn-block" hidden="hidden">Dodaj nową pastę</button>
+          </div>
+          <div class="form-group">
+              <button onclick='window.location.href="statystyki.php"' type="button" class="btn btn-primary btn-lg btn-block">Statystyki</button>
+          </div>
+          <div class="form-group">
+              <button onclick='window.location.href="user.php"' type="button" class="btn btn-primary btn-lg btn-block">Informacje o użytkowniku</button><br>
+          </div>
+          <div class="form-group">
+              <button onclick='window.location.href="logout.php"' type="button" class="btn btn-primary btn-lg btn-block">Wyloguj</button>
+          </div>
+       </form>
+</div>
+</body>
 </html>
+<?php
+  if(isSet($_GET["ankieta"])){
+    echo "<script>window.alert(\"Dziekujemy za uzupelnienie ankiety\")</script>";
+  }
+  $c=$_COOKIE['zalogowanyuser'];
+  if($c=="premium"||$c=="admin"){
+    echo '<script>document.getElementById("asdf").removeAttribute("hidden");</script>';
+  }
+?>
